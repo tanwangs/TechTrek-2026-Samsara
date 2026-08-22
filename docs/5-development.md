@@ -47,6 +47,11 @@ The selected game engine handles four primary systems essential to the gameplay 
 *   `DialogueManager`: Loads conversation lines, handles branching choices, and updates learning progress flags.
 *   `SceneLoader`: Handles fade-ins, fade-outs, and level transitions across different *Nyes*.
 *   `UIManager`: Displays dialogue boxes, inventory items, and educational reflection prompts.
+*   
+### Visual & Environmental Assets
+* **Placeholder Art Assets:** Environment mapping for forest and wilderness areas across the *Nyes* utilizes the open-source **[PixelArt Forest Asset Pack](https://zedpxl.itch.io/pixelart-forest-asset-pack)** by *zedpxl*. These free assets serve as placeholders to make map design and tilemaps during the prototyping phase.
+
+---
 
 ### Core Engine Architecture: Godot 4
 *The Tapestry of Monyul* is developed using the **Godot Engine**. The architecture relies on Godot’s fundamental design principles: **Nodes** and **Scenes**.
