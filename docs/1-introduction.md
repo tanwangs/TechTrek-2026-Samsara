@@ -23,3 +23,20 @@ Textbook learning can sometimes feel disconnected from a student's lived experie
 
 ### Relation to Education
 This project directly aligns with Bhutan's educational philosophy of Gross National Happiness (GNH), specifically focusing on cultural preservation and environmental conservation.
+
+---
+
+## 3.3 Academic Integration
+
+### Target Audience
+Specifically middle school, high school, and undergraduate students studying humanities, environmental studies, or people exploring Bhutanese cultural history.
+
+### Learning Outcomes
+
+To be filled.
+
+### Relation to Education
+This project directly aligns with Bhutan's educational philosophy of Gross National Happiness, specifically focusing on cultural preservation and environmental conservation.
+
+### Gameplay Support for Learning Objectives
+Mechanics reflect learning goals. Players cannot complete a realm through trial and error; they must read dialogue carefully, observe changes in the game world, and engage with viewpoint locations.
