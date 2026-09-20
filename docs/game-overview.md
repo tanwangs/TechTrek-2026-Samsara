@@ -2,36 +2,84 @@
 
 ## 1. Game Overview
 
-### 1.1 Premise & Narrative
-*The Tapestry of Monyul* is a 2D top-down narrative RPG designed to take players on a virtual "Nature Retreat" across the sacred landscapes (*nyes*) of Bhutan. Players step into the shoes of **Tashi**, a student who explores three distinct realms—**Jhomo Lhari**, **Drakay Pangtsho**, and **Tak Tsang**—interacting with historical figures, local keepers, and spiritual deities to rediscover attentiveness, cultural heritage, and ecological balance.
+### 1.1 Game Title & Logline
+Title: The Tapestry of Monyul
 
-### Purpose and Objectives
-The purpose of this project is to create an engaging, interactive digital medium that bridges the gap between modern youth and traditional Bhutanese wisdom. By transforming passive learning into an immersive experience, the game seeks to revitalize interest in cultural roots.
+Genre: 2D Top-Down Narrative RPG
 
-### Brief Overview of the Educational Game
-Through narrative-driven gameplay, exploration, and dialogue choices, players visit three primary *nyes*: **Jhomo Lhari** (encountering Aum Jomo), **Drakay Pangtsho** (interacting with a *Tshomen* / mermaid), and **Tak Tsang** (learning from monks). The gameplay serves as a vehicle to teach core cultural and environmental values.
+Logline: Step into the boots of Tashi, a young student going on a "Nature Retreat" across Bhutan's sacred landscapes (nyes), where interactions with local guardians, historical figures, and lake deities unlock ancient wisdom, environmental mindfulness, and Gross National Happiness (GNH) values.
 
 ---
 
-## Problem Statement
+### 1.2 Educational Purpose & GNH Alignment
 
-### Problem
-Many young people today are slowly forgetting the culture, spiritual traditions, and sacred oral histories of Bhutan. As technology and modern, globalized lifestyles grow, fewer youth are learning about traditional beliefs, values, and our profound connection to nature.
+#### Purpose
+Cultural Revitalization: Bridge the gap between modern digital-native youth and Bhutan’s traditional heritage, spiritual oral histories, and sacred nature reverence.
 
-### Importance of the Game
-Textbook learning can sometimes feel disconnected from a student's lived experience. By gamifying this cultural journey, The Tapestry of Monyul transforms passive observation into active exploration, preserving vital cultural knowledge in a format that resonates with a digital-native generation.
+Active Learning: Shift learning from passive textbook reading into an active, experiential journey through interactive dialogue choices, mindful exploration, and consequential gameplay actions.
 
-### Relation to Education
-This project directly aligns with Bhutan's educational philosophy of Gross National Happiness (GNH), specifically focusing on cultural preservation and environmental conservation.
+Educational Alignment (Gross National Happiness)Cultural Preservation & Promotion: Direct engagement with Bhutanese folklore, Buddhist monastic history, local deities (Tshomen, Aum Jomo), and ancient names of the sacred land (Monyul / Lhomon).  Environmental Conservation: Interacting directly with fragile ecosystems to teach non-interference, high-altitude respect, and lake preservation.
 
-### 1.2 Core Educational Themes
-The game directly aligns with Bhutan's educational philosophy of Gross National Happiness (GNH), specifically cultural preservation and environmental conservation. Instead of combat, progress is driven by mindful observation:
-* **Drakay Pangtsho (Noticing):** Interacting with the *Tshomen* (mermaid/lake deity) to understand lake pollution, clean up scattered waste, and sit at quiet viewpoints.
-* **Tak Tsang (Storytelling):** Dialogues with three generation keepers/monks to preserve oral history, historical wisdom, and folklore.
-* **Jhomo Lhari (Offering):** Encountering *Aum Jomo*, collecting sacred offering items, and learning high-altitude ecological respect.
+### Subject Integration & Curricular Core
 
-### 1.3 Target Audience
-* **Target Audience:** Students and youth studying digital humanities, environmental studies, or cultural history.
-* **Classroom Integration:** Designed for 30–45 minute modular play sessions in Value Education, History, or Environmental Studies classes.
-* **Learning Outcomes:** Students learn to identify sacred sites, articulate the interdependence between human actions and nature, and critically reflect on environmental conditions.
+                             +-----------------------------------+
+                             |     THE TAPESTRY OF MONYUL       |
+                             +-----------------------------------+
+                                               |
+         +-------------------------------------+-------------------------------------+
+         |                                     |                                     |
++------------------+                 +------------------+                 +------------------+
+|      GNH &       |                 |  ENVIRONMENTAL   |                 |    ART, DESIGN   |
+| CULTURAL VALUES  |                 |     STUDIES      |                 |   & HUMANITIES   |
++------------------+                 +------------------+                 +------------------+
+| • Oral Folklore  |                 | • Interdependence|                 | • 16-bit Pixel   |
+| • Sacred Nyes    |                 | • Pollution/Waste|                 |   Art Aesthetics |
+| • Ley-Ju-Drey    |                 | • High-Altitude  |                 | • Architecture   |
+|   (Cause-Effect) |                 |   Ecology        |                 |   Preservation   |
++------------------+                 +------------------+                 +------------------+
 
+Living in Coherence with Nature: Explorations through distinct environmental ecosystems encourage reflection on the current condition of sacred spaces and human impact.
+
+Cultural Values & Sacred Oral History: Interactive storytelling with monks, elder keepers, and deities passed down through generations.
+
+Ley-Ju-Drey (Karma / Cause and Effect): Gameplay mechanics reinforce that every human action yields a direct environmental or spiritual reaction (e.g., disturbing sacred waters directly triggers a deity's wrath/reaction).
+
+Art, Architecture, and Visual Humanities: Meticulous pixel art representation of Bhutanese traditional dress (Gho and Kira), architectural landmarks (Dzongs, Chortens, Stupas), and traditional iconography.
+
+---
+
+### 1.3 Target Audience & Classroom Integration
+
+#### Target Audience & Demographics
+
+Primary Group: Students and youth (Ages 12–18+) studying Digital Humanities, Environmental Studies, Value Education, and Bhutanese History.
+
+Secondary Group: Indie RPG players and international audiences interested in Himalayan culture, sacred geography, and eco-centric narrative games.
+
+Classroom Integration Strategy
+Modular Play Sessions: Structured for 30–45 minute class periods matching standard secondary school time slots.
+
+#### Subject Applications:
+
+Value Education / GNH: Discussion on Ley-Ju-Drey and personal responsibility after playing the Drakay Pangtsho lake quest.
+
+History & Social Studies: Examining oral traditions at Tak Tsang through dialogue with generation keepers.
+
+Environmental Studies: Studying high-altitude alpine ecology and conservation themes at Jhomo Lhari.
+
+---
+
+### 1.4 Problem Statement & Value Proposition
+
+#### The Problem
+As globalized lifestyles, technology, and screen time dominate modern youth culture, young generations are becoming increasingly disconnected from Bhutan's sacred oral traditions, spiritual roots, and deep-seated ecological wisdom. Traditional textbook education often feels abstract or disconnected from a student's lived experience, risking the gradual loss of intangible cultural heritage.
+
+#### The Solution / Value Proposition
+The Tapestry of Monyul gamifies cultural preservation. By embedding core educational values into top-down RPG gameplay, narrative choices, and environmental puzzles, the project transforms passive observers into active participants, preserving vital Bhutanese wisdom in a medium that natively resonates with digital natives.
+
+### 1.5 Sacred Realms (Nyes) Overview
+
+| Realm/Nye | Deity/Character | Core Educational Concept | Gameplay Action |
+| Jhomo Lhari | Aum Jomo | High-altitude ecology, sacred offerings, and spiritual respect | |
+| Drakey Pangtsho | Tshomen | Right aligned | |
+| Tak Tsang | Monks | Column data | |
