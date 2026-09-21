@@ -87,7 +87,6 @@ verified during development:
 ### 4.6 User Acceptance Testing
 
 *[To be completed — recommend testing with representative target users
-(ages 12–18) in a 30–45 minute session format matching the intended
-classroom integration model described in `game-overview.md`, and
+(ages 12–18) and
 recording qualitative feedback on pacing, clarity of mechanics, and
 cultural resonance.]*
