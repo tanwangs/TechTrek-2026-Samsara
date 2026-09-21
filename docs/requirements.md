@@ -9,12 +9,14 @@ by *zedpxl*, used for prototyping terrain paths. *(Confirm the asset
 pack's license terms are compatible with the competition's submission
 requirements, and credit the author in the final submission.)*
 
-<a href="https://ibb.co/WpNwt1Qd"><img src="https://i.ibb.co/qFLf5wz4/Screenshot-2026-09-22-at-1-45-10-AM.png" alt="Screenshot-2026-09-22-at-1-45-10-AM" border="0"></a>
 
 ### Research Directions
 - Comparable narrative/cultural-education games (e.g. *Never Alone*,
   which embeds Indigenous Alaskan storytelling into mechanics rather
   than cutscenes) as a reference point for this design approach.
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/kkmcNcN/never-alone-1554756467.jpg" alt="never alone 1554756467" border="0"></a>
+  
 - Research on experiential/embodied learning vs. didactic instruction in
   educational game design, relevant to justifying the mechanics-first
   approach used throughout (e.g. the pacing mechanic at Jomolhari,
