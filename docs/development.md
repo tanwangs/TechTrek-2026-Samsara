@@ -50,22 +50,82 @@ All character sprite sheets use a 48×48 pixel bounding box to allow room for mo
 
 ```
 
-* **Main Hero (Tashi in Gho)**: Customization built directly over the Game Endeavor Mystic Woods base character in Piskel. Designed using real-world references of traditional Bhutanese Gho attire, implementing the wrapped robe structure, white folded cuffs (*lagay*), hoisted belt (*kera*), and waist pouch frame-by-frame across all directional walk cycles.
-![Logo](images/player.png)
-* **Monk Character (`taktsang_monk.png`)**: Reference posture generated via Gemini, palette extracted via ImageColorPicker, and edited over the 48×48 base frame in Piskel. Held in a stationary idle posture representing a monk in traditional robes.
- ![Logo](images/taktsangmonk.png)
-* **Aum Jomo**: Concept art generated via Ludo.ai Sprite Generator for posture and *kira* clothing folds. Palette sampled in ImageColorPicker and edited in Piskel over the standard 48×48 hero base for grounding consistency.
- ![Logo](images/aumjomo.png)
-* **Guide NPC (`guide_sheet.png`)**: Reference generated using Gemini, color-sampled via ImageColorPicker, and pixel-edited in Piskel over the base hero frame to match world scale and perspective.
- ![Logo](images/guide.png)
-* **Tshomen / Mermaid (`tshomen_sheet.png`)**: Upper body and color design derived from Gemini references. Fluid 6-frame tail swishing movement was synthesized using SpriteFlow.io, then integrated and cleaned frame-by-frame in Piskel over the 48×48 base.
-![Logo](images/tshomen.png)
+## 3. Making Sprites & Visual Assets
 
-### 2.3 Environmental Assets & Visual Pipeline Fixes
+### 3.1 Sprite & Character Specifications
 
-* **Prototyping Placeholders**: Wilderness environments utilize the open-source PixelArt Forest Asset Pack by zedpxl for prototyping terrain paths.
-* **Custom Props**: Specialized Bhutanese architectural assets (`bhutan_house.png`, `dzong.png`, `stupa.png`, `prayer_flags.png`, `water_bowl.png`) were created and packed into `TileSet_props`.
-* **Animation State Overrides & Y-Sort Fix**: Fixed character depth-sorting bugs by stripping pre-baked `frame_progress` attributes from `AnimatedSprite2D` scene nodes, restoring pure engine-driven Y-sorting across level layers.
+All character and environmental art follows a standardized 16×16 grid system (character frame sheets scaled at 48×48 per frame). All assets use the RGBA8 format with transparent backgrounds.
+
+| Asset File | Usage / Description |
+| --- | --- |
+| `res://assets/sprites/player (1).png` | Multi-directional movement sheet for Tashi (`idle_front`, `walk_front`, `idle_side`, etc.). |
+| `res://assets/generated/aum_jomo_sheet.png` | Animation atlas for deity Aum Jomo. |
+| `res://assets/generated/tshomen_sheet.png` | Animation atlas for the lake deity Tshomen. |
+| `res://assets/generated/guide_sheet.png` | Animation atlas for the Crossroads Guide NPC. |
+| `res://assets/generated/taktsang_monk.png` | Sprite sheet for monastery monks. |
+
+---
+
+### 3.2 Base Character Setup & Technical Benchmarks
+
+The player character from Game Endeavor's *Mystic Woods* asset pack was selected as the visual anchor. Core parameters were established around this reference to ensure visual and technical consistency across the project:
+
+* **Grid & Bounding Box:** Character sprite sheets use a 48×48 pixel frame bounding box to allow room for weapon swings and animation padding, while world tilemaps fit a standard 16×16 pixel grid.
+* **Engine Import Settings:** When importing sheets into the engine, grids are sliced uniformly at 48×48 pixels with animation rates set between 12 and 16 frames per second (FPS) for smooth movement.
+* **Visual Reference Benchmark:** Using the base hero as the primary style reference ensures all future characters, NPCs, and custom edits match its 16-bit color palette, outline density, and bottom-center grounding pivot.
+
+---
+
+### 3.3 Character & Asset Creation Processes
+
+#### Customizing the Hero: Adding a Gho
+
+To make the main character unique, the original *Mystic Woods* sprite was modified so the hero wears a traditional Bhutanese Gho:
+
+1. **Visual Reference:** Real-world photographs were gathered to capture key visual features—specifically the wrapped robe structure, wide white folded cuffs (*lagay*), hoisted belt (*kera*), and the pouch formed above the waist.
+2. **Editing in Piskel:** The original 48×48 frame sprite sheet was imported into Piskel. The outfit was drawn directly over the base character's body frame-by-frame, translating fabric folds, colors, and traditional proportions into pixel art.
+
+#### The Monk Character
+
+* **Reference Generation:** Gemini generated initial visual reference images to assist in translating traditional monk robes, posture, and clothing details into top-down pixel art.
+* **Color Palette:** Images were uploaded to ImageColorPicker to extract exact hex codes and color names, constructing a custom palette in Piskel.
+
+* **Direct Base Editing:** Edits were applied directly over the 48×48 hero base frame in Piskel to maintain stance angle, scale, and the bottom-center grounding point.
+* **Final Stance:** The monk strictly remains in an idle position to serve a stationary role without requiring walking or action animation cycles. Focus was placed on fine-tuning robe drapes and shading.
+
+#### The Grandma NPC
+
+* **AI Reference Generation:** Concept art was generated using Ludo.ai's Sprite Generator to guide posture, clothing folds, and hair styling.
+* **Color Palette:** Concept images were sampled in ImageColorPicker to extract exact hex codes for clothing and hair before importing into Piskel.
+* **Direct Canvas Editing:** Editing occurred directly over the 48×48 hero base sprite in Piskel to align her height, stance, and grounding point with the rest of the game world.
+* **Final Polish:** Silhouettes and garment details were refined to ensure a distinct look that fits the *Mystic Woods* aesthetic as a stationary NPC.
+
+#### The Guide NPC
+
+* **Gemini Reference Generation:** Gemini was utilized to obtain precise visual prompts and character designs for the Guide NPC.
+* **Color Palette & Setup:** Outputs were processed in ImageColorPicker to extract hex codes and build a custom palette in Piskel.
+* **Direct Base Editing:** Modifications were drawn directly over the 48×48 hero sprite in Piskel to match cast proportions, perspective, and grounding points.
+* **Final Polish:** Clothing details and shading were fine-tuned for seamless integration into the world.
+
+#### The Mermaid Sprite (Tshomen)
+
+* **Gemini Reference Generation:** Visual references were generated using Gemini to establish the upper body design, color scheme, and tail structure.
+* **Tail Animation with SpriteFlow:** SpriteFlow.io was used to generate and refine tail-swishing motion for smooth, water-bound animation cycles.
+* **Color Palette & Base Editing:** Exact hex codes were extracted via ImageColorPicker to build a custom palette in Piskel, editing over the standard 48×48 base frame to keep upper body scale consistent.
+* **Final Integration:** Tail animation frames were integrated back into Piskel, cleaning up pixel edges and shading for final assembly.
+
+---
+
+### 3.4 Environmental & Prop Assets
+
+* **Prototyping Placeholders:** Forest and wilderness environments utilize the open-source *PixelArt Forest Asset Pack* by zedpxl for terrain paths during prototyping.
+* **Custom Props:** Specialized Bhutanese architecture and cultural props (`bhutan_house.png`, `dzong.png`, `stupa.png`, `prayer_flags.png`, `water_bowl.png`) were created and packed into `TileSet_props`.
+
+---
+
+### 3.5 Visual Bug Fixes & Rendering Pipeline
+
+* **Animation State Overrides:** Character depth-sorting issues were resolved by stripping pre-baked `frame_progress` attributes from `AnimatedSprite2D` scene nodes, restoring pure engine-driven Y-sorting across level layers.
 
 ---
 
