@@ -1,4 +1,4 @@
-##  Testing and Validation
+## 4.4 Testing and Validation
  
 **Automated testing:** the codebase underwent automated testing using
 GDScript test runners across 11 test suites, **80/80 tests passing
