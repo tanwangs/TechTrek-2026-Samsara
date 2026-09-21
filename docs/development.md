@@ -70,3 +70,24 @@ The project followed an **Agile / Iterative Development Model** across four main
 2. **Input Intercept:** Player presses interact (`E` / `Space`). `NPC.interact()` verifies player position and calls `DialogueManager.start(sequence)`.
 3. **Branching Sequence:** `NPC._pick_sequence()` evaluates `GameState.has_seen(lore_key)` to automatically play primary narrative on first visit or repeat dialogue on subsequent visits.
 4. **Quest Resolution:** Completing actions (cleaning waste, placing altar items, listening to all 3 monks) calls `GameState.mark_realm_complete("realm_name")`.
+
+---
+
+### 4.5 Manual & Integration Verification
+
+In addition to the automated suite above, the following were manually
+verified during development:
+- The Jomolhari pacing mechanic correctly gates quest completion
+  (rushed attempts trigger a retry rather than completing)
+- Drakay Pangtsho's environmental cues (litter, disturbed offering
+  stones) appear before the guide character's full explanation
+- Prop Y-sort depth ordering renders correctly after the
+  `frame_progress` bug fix (also covered by `test_prop_sorting.gd`)
+
+### 4.6 User Acceptance Testing
+
+*[To be completed — recommend testing with representative target users
+(ages 12–18) in a 30–45 minute session format matching the intended
+classroom integration model described in `game-overview.md`, and
+recording qualitative feedback on pacing, clarity of mechanics, and
+cultural resonance.]*
