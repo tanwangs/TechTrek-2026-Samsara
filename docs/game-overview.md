@@ -9,6 +9,9 @@ Genre: 2D Top-Down Narrative RPG
 
 Logline: Step into the boots of Tashi, a young student going on a "Nature Retreat" across Bhutan's sacred landscapes (nyes), where interactions with local guardians, historical figures, and lake deities unlock ancient wisdom, environmental mindfulness, and Gross National Happiness (GNH) values.
 
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/T5Jr42Y/Screenshot-2026-09-21-at-10-35-27-PM-2.png" alt="Screenshot 2026 09 21 at 10 35 27 PM 2" border="0"></a>
+
+
 ---
 
 ## 1.2 Educational Purpose & GNH Alignment
@@ -39,6 +42,8 @@ Educational Alignment (Gross National Happiness)Cultural Preservation & Promotio
 |   (Cause-Effect) |                 |   Ecology        |                 |   Preservation   |
 +------------------+                 +------------------+                 +------------------+
 ```
+
+
 
 Living in Coherence with Nature: Explorations through distinct environmental ecosystems encourage reflection on the current condition of sacred spaces and human impact.
 
@@ -85,6 +90,9 @@ The Tapestry of Monyul gamifies cultural preservation. By embedding core educati
 | Jhomo Lhari | Aum Jomo | High-altitude ecology, sacred offerings, and spiritual respect | |
 | Drakey Pangtsho | Tshomen | Right aligned | |
 | Tak Tsang | Monks | Column data | |
+
+<a href="https://ibb.co/FbrzTh5G"><img src="https://i.ibb.co/MDv70gcq/Screenshot-2026-09-21-at-10-44-47-PM-2.png" alt="Screenshot-2026-09-21-at-10-44-47-PM-2" border="0"></a>
+
 
 ## 1.6 Objectives
  
@@ -138,11 +146,6 @@ sacred oral traditions, spiritual heritage, and ecological wisdom.
 - Sound effects (distinct from any background music/ambience) are a
   planned but not-yet-fully-documented layer.
 - No combat or branching-choice narrative structure.
----
-
-## APPEND THIS TO THE END OF YOUR EXISTING game-overview.md
-## (These are new sections — 1.6 Objectives and 1.7 Scope — your
-## existing 1.1–1.5 content stays as-is above this.)
 
 ---
 
