@@ -11,6 +11,8 @@ Built in **Godot 4** using **GDScript**. Core state and UI transitions are manag
 * **`DialogueManager` (`dialogue_manager.gd`):** Handles conversation flows, locks inputs while active, and emits text signals.
 * **`ScreenFade` (`screen_fade.gd`):** Controls screen canvas overlay fades (`BLACK` / `WHITE`).
 
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/MxHcgFLp/Screenshot-2026-09-22-at-1-06-38-AM.png" alt="Screenshot 2026 09 22 at 1 06 38 AM" border="0"></a>
+
 ---
 
 ### Node & Layer Structure
@@ -23,13 +25,25 @@ Built in **Godot 4** using **GDScript**. Core state and UI transitions are manag
 * **`Area2D`:** Non-blocking triggers for NPCs, scene transitions, and interaction radii.
 * **`TileMapLayer`:** World tile and depth rendering.
 
+All nodes here:
+
+<a href="https://ibb.co/PJmQZTv"><img src="https://i.ibb.co/LBk5zQX/Screenshot-2026-09-22-at-1-07-35-AM.png" alt="Screenshot-2026-09-22-at-1-07-35-AM" border="0"></a>
+
+Important Nodes in our Game:
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/ks4yRxwF/Screenshot-2026-09-22-at-1-30-38-AM.png" alt="Screenshot 2026 09 22 at 1 30 38 AM" border="0"></a>
+
 #### TileMap Layers & Depth Sorting
 
-Every map uses 3 layered `TileMapLayer` nodes:
+Some map uses 3 layered `TileMapLayer` nodes:
 
 1. **`ground`:** Paths, grass, and terrain (`y_sort_enabled = false`).
-2. **`props`:** Buildings, trees, rocks (`y_sort_enabled = true`). Origin set to $16 \times 16\text{ px}$ so entities render correctly in front of/behind props.
-3. **`CleanWater`:** Visual water overlays (`y_sort_enabled = false`).
+2. **`props/yset`:** Buildings, trees, rocks (`y_sort_enabled = true`).
+3. **`cliff`:** The cliffs in (`y_sort_enabled = true`).
+
+The Three TileMapLayer nodes:
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/czkdqkN/Screenshot-2026-09-22-at-1-09-57-AM.png" alt="Screenshot 2026 09 22 at 1 09 57 AM" border="0"></a>
 
 ---
 
@@ -41,18 +55,86 @@ Every map uses 3 layered `TileMapLayer` nodes:
 * **Import Settings:** Uniform $48 \times 48\text{ px}$ grid slices, $12\text{--}16\text{ FPS}$ animation rates, RGBA8 format with transparent backgrounds.
 * **Style Anchor:** Derived from *Mystic Woods* hero sprite (16-bit color palette, bottom-center grounding pivot).
 
+<a href="https://ibb.co/Jf5yGQ4"><img src="https://i.ibb.co/P7w9PQn/Screenshot-2026-09-22-at-1-32-59-AM.png" alt="Screenshot 2026 09 22 at 1 32 59 AM" border="0"></a>
+
 ### Character Creation Workflow
 
 1. **AI Reference:** Concepts generated via Gemini/Ludo.ai.
+
+Monk:
+
+<a href="https://ibb.co/sJN2TmNB"><img src="https://i.ibb.co/n8YbXgYW/Screenshot-2026-09-22-at-1-12-59-AM.png" alt="Screenshot 2026 09 22 at 1 12 59 AM" border="0"></a>
+
+Aum Jomo:
+
+<a href="https://ibb.co/GQqQYXCY"><img src="https://i.ibb.co/fdsd6br6/Screenshot-2026-09-22-at-1-13-49-AM.png" alt="Screenshot-2026-09-22-at-1-13-49-AM" border="0"></a>
+
+Kinley the Guide:
+
+<a href="https://ibb.co/fVd0SjHp"><img src="https://i.ibb.co/wZh6L54W/Screenshot-2026-09-22-at-1-14-59-AM.png" alt="Screenshot 2026 09 22 at 1 14 59 AM" border="0"></a>
+
+Tshomen:
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/Q3Wr1Bzb/Screenshot-2026-09-22-at-1-15-46-AM.png" alt="Screenshot 2026 09 22 at 1 15 46 AM" border="0"></a>
+
+Choden the Villager:
+
+<a href="https://ibb.co/JjRMXMZQ"><img src="https://i.ibb.co/chc7z7qL/Screenshot-2026-09-22-at-1-16-20-AM.png" alt="Screenshot-2026-09-22-at-1-16-20-AM" border="0"></a>
+
+The Pilgrim:
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/DxvpyGb/Screenshot-2026-09-22-at-1-17-10-AM.png" alt="Screenshot 2026 09 22 at 1 17 10 AM" border="0"></a>
+
 2. **Color Palette:** Hex codes extracted via ImageColorPicker.
+
+The Monk:
+
+<a href="https://ibb.co/Mk1W8Bnx"><img src="https://i.ibb.co/4RS9s1Wn/Screenshot-2026-09-22-at-1-18-10-AM.png" alt="Screenshot-2026-09-22-at-1-18-10-AM" border="0"></a>
+
+Aum Jomo:
+
+<a href="https://ibb.co/0jxXDZDr"><img src="https://i.ibb.co/pvSP0Z0d/Screenshot-2026-09-22-at-1-18-18-AM.png" alt="Screenshot-2026-09-22-at-1-18-18-AM" border="0"></a>
+<a href="https://ibb.co/G31t362f"><img src="https://i.ibb.co/Xkd3kQsf/Screenshot-2026-09-22-at-1-18-28-AM.png" alt="Screenshot-2026-09-22-at-1-18-28-AM" border="0"></a>
+
 3. **Canvas Editing:** Hand-drawn over the $48 \times 48\text{ px}$ base frame in Piskel to ensure consistent stance and grounding pivots (e.g., adding a traditional Gho, monk robes, or NPC outfits).
+
+The Monk Finished Sprite:
+
+<a href="https://ibb.co/9fPV3yk"><img src="https://i.ibb.co/krZ96qs/Screenshot-2026-09-22-at-1-19-02-AM.png" alt="Screenshot-2026-09-22-at-1-19-02-AM" border="0"></a>
+
+Kinley Finished Sprite:
+
+<a href="https://ibb.co/j95p09wb"><img src="https://i.ibb.co/twhdjw2Q/Screenshot-2026-09-22-at-1-19-19-AM.png" alt="Screenshot-2026-09-22-at-1-19-19-AM" border="0"></a>
+
+Aum Jomo Finished Sprite:
+
+<a href="https://ibb.co/bjj2kDQr"><img src="https://i.ibb.co/fVVnsLqC/Screenshot-2026-09-22-at-1-19-11-AM.png" alt="Screenshot-2026-09-22-at-1-19-11-AM" border="0"></a>
+
+Tshomen Finished Sprite:
+
+<a href="https://ibb.co/G4Qc6KN7"><img src="https://i.ibb.co/Nd2Zv8bx/Screenshot-2026-09-22-at-1-19-29-AM.png" alt="Screenshot-2026-09-22-at-1-19-29-AM" border="0"></a>
+
+Choden Finished Sprite:
+
+<a href="https://ibb.co/dw9hynMH"><img src="https://i.ibb.co/7dc9F7C0/Screenshot-2026-09-22-at-1-19-37-AM.png" alt="Screenshot-2026-09-22-at-1-19-37-AM" border="0"></a>
+
+Pilgrim Finished Sprite:
+
+<a href="https://ibb.co/9m0ySPys"><img src="https://i.ibb.co/MyHPQdPM/Screenshot-2026-09-22-at-1-19-46-AM.png" alt="Screenshot-2026-09-22-at-1-19-46-AM" border="0"></a>
+
 4. **Special Movement:** Custom tools like *SpriteFlow.io* were used to generate liquid tail-swishing frames for the lake deity (*Tshomen*).
+
+Tshomen:
+
+<a href="https://ibb.co/ccbc49XN"><img src="https://i.ibb.co/3yfygbY0/Screenshot-2026-09-22-at-1-18-42-AM.png" alt="Screenshot-2026-09-22-at-1-18-42-AM" border="0"></a>
 
 ---
 
 ## 3. Travel System — Roadside Taxi Architecture
 
 Moves players between maps using a shared, data-driven taxi rank (`scenes/taxi_rank.tscn` + `scripts/travel/taxi_rank.gd`).
+
+<a href="https://ibb.co/8LKZmPz0"><img src="https://i.ibb.co/jP6X83VT/Screenshot-2026-09-22-at-1-27-37-AM.png" alt="Screenshot-2026-09-22-at-1-27-37-AM" border="0"></a>
 
 ### Journey Flows
 
