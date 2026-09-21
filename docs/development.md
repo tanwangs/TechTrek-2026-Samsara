@@ -28,25 +28,42 @@ Every world map utilizes three distinct `TileMapLayer` nodes to handle visual la
 
 ---
 
-## 3. Making Sprites & Visual Assets
+## 2. Visual Assets & Sprite Development Architecture
 
-### 3.1 Sprite & Character Specifications
-All character and environmental art follows a standardized $16 \times 16$ grid system (character frame sheets scaled at $48 \times 48$ per frame). Assets use RGBA8 format with transparent backgrounds.
+### 2.1 Sprite & Character Technical Benchmarks
+
+All character sprite sheets use a 48×48 pixel bounding box to allow room for movement, weapon swings, and posture padding, while world tilemaps utilize a standard 16×16 pixel grid. Engine import settings slice sprite grids uniformly at 48×48 pixels and enforce an animation speed of 12 to 16 FPS. All entities share a bottom-center grounding pivot, a 16-bit color palette, and consistent outline density derived from the base Mystic Woods hero style reference. Assets use RGBA8 format with transparent backgrounds.
 
 | Asset File | Usage / Description |
-| :--- | :--- |
+| --- | --- |
 | `res://assets/sprites/player (1).png` | Multi-directional movement sheet for Tashi (`idle_front`, `walk_front`, `idle_side`, etc.). |
 | `res://assets/generated/aum_jomo_sheet.png` | Animation atlas for deity Aum Jomo. |
 | `res://assets/generated/tshomen_sheet.png` | Animation atlas for the lake deity Tshomen. |
 | `res://assets/generated/guide_sheet.png` | Animation atlas for the Crossroads Guide NPC. |
 | `res://assets/generated/taktsang_monk.png` | Sprite sheet for monastery monks. |
 
-### 3.2 Environmental & Prop Assets
-* **Prototyping Placeholders:** Forest and wilderness environments utilize the open-source **[PixelArt Forest Asset Pack](https://zedpxl.itch.io/pixelart-forest-asset-pack)** by *zedpxl* for prototyping terrain paths.
-* **Custom Props:** Specialized Bhutanese architecture props (`bhutan_house.png`, `dzong.png`, `stupa.png`, `prayer_flags.png`, `water_bowl.png`) were created and packed into `TileSet_props`.
+### 2.2 Character Customization & AI Reference Pipelines
 
-### 3.3 Visual Bug Fixes & Rendering Pipeline
-* **Animation State Overrides:** Fixed character depth sorting bugs by stripping pre-baked `frame_progress` attributes from `AnimatedSprite2D` scene nodes, restoring pure engine-driven $Y$-sorting across level layers.
+```
+[ AI Reference Gen ] ---> [ Color Extraction ] ---> [ Canvas Base Editing ] ---> [ Motion / Polish ]
+ (Gemini / Ludo.ai)        (ImageColorPicker)       (Piskel 48x48 Base)         (Engine Integration)
+
+```
+
+* **Main Hero (Tashi in Gho)**: Customization built directly over the Game Endeavor Mystic Woods base character in Piskel. Designed using real-world references of traditional Bhutanese Gho attire, implementing the wrapped robe structure, white folded cuffs (*lagay*), hoisted belt (*kera*), and waist pouch frame-by-frame across all directional walk cycles.
+
+![A cozy campfire](https://example.com/campfire.jpg)
+  
+* **Monk Character (`taktsang_monk.png`)**: Reference posture generated via Gemini, palette extracted via ImageColorPicker, and edited over the 48×48 base frame in Piskel. Held in a stationary idle posture representing a monk in traditional robes.
+* **Grandma NPC**: Concept art generated via Ludo.ai Sprite Generator for posture and *kira* clothing folds. Palette sampled in ImageColorPicker and edited in Piskel over the standard 48×48 hero base for grounding consistency.
+* **Crossroads Guide NPC (`guide_sheet.png`)**: Reference generated using Gemini, color-sampled via ImageColorPicker, and pixel-edited in Piskel over the base hero frame to match world scale and perspective.
+* **Tshomen / Mermaid (`tshomen_sheet.png`)**: Upper body and color design derived from Gemini references. Fluid 6-frame tail swishing movement was synthesized using SpriteFlow.io, then integrated and cleaned frame-by-frame in Piskel over the 48×48 base.
+
+### 2.3 Environmental Assets & Visual Pipeline Fixes
+
+* **Prototyping Placeholders**: Wilderness environments utilize the open-source PixelArt Forest Asset Pack by zedpxl for prototyping terrain paths.
+* **Custom Props**: Specialized Bhutanese architectural assets (`bhutan_house.png`, `dzong.png`, `stupa.png`, `prayer_flags.png`, `water_bowl.png`) were created and packed into `TileSet_props`.
+* **Animation State Overrides & Y-Sort Fix**: Fixed character depth-sorting bugs by stripping pre-baked `frame_progress` attributes from `AnimatedSprite2D` scene nodes, restoring pure engine-driven Y-sorting across level layers.
 
 ---
 
