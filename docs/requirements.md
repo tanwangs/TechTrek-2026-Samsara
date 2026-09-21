@@ -4,10 +4,12 @@
 
 ### Referenced External Assets
 Forest and wilderness prototyping terrain uses the open-source
-[PixelArt Forest Asset Pack](https://zedpxl.itch.io/pixelart-forest-asset-pack)
+[PixelArt Forest Asset Pack]([https://zedpxl.itch.io/pixelart-forest-asset-pack](https://game-endeavor.itch.io/mystic-woods))
 by *zedpxl*, used for prototyping terrain paths. *(Confirm the asset
 pack's license terms are compatible with the competition's submission
 requirements, and credit the author in the final submission.)*
+
+<a href="https://ibb.co/WpNwt1Qd"><img src="https://i.ibb.co/qFLf5wz4/Screenshot-2026-09-22-at-1-45-10-AM.png" alt="Screenshot-2026-09-22-at-1-45-10-AM" border="0"></a>
 
 ### Research Directions
 - Comparable narrative/cultural-education games (e.g. *Never Alone*,
