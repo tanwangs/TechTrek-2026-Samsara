@@ -51,13 +51,15 @@ All character sprite sheets use a 48×48 pixel bounding box to allow room for mo
 ```
 
 * **Main Hero (Tashi in Gho)**: Customization built directly over the Game Endeavor Mystic Woods base character in Piskel. Designed using real-world references of traditional Bhutanese Gho attire, implementing the wrapped robe structure, white folded cuffs (*lagay*), hoisted belt (*kera*), and waist pouch frame-by-frame across all directional walk cycles.
-
-![A cozy campfire](https://example.com/campfire.jpg)
-  
+![Logo](images/player.png)
 * **Monk Character (`taktsang_monk.png`)**: Reference posture generated via Gemini, palette extracted via ImageColorPicker, and edited over the 48×48 base frame in Piskel. Held in a stationary idle posture representing a monk in traditional robes.
-* **Grandma NPC**: Concept art generated via Ludo.ai Sprite Generator for posture and *kira* clothing folds. Palette sampled in ImageColorPicker and edited in Piskel over the standard 48×48 hero base for grounding consistency.
-* **Crossroads Guide NPC (`guide_sheet.png`)**: Reference generated using Gemini, color-sampled via ImageColorPicker, and pixel-edited in Piskel over the base hero frame to match world scale and perspective.
+ ![Logo](images/taktsangmonk.png)
+* **Aum Jomo**: Concept art generated via Ludo.ai Sprite Generator for posture and *kira* clothing folds. Palette sampled in ImageColorPicker and edited in Piskel over the standard 48×48 hero base for grounding consistency.
+ ![Logo](images/aumjomo.png)
+* **Guide NPC (`guide_sheet.png`)**: Reference generated using Gemini, color-sampled via ImageColorPicker, and pixel-edited in Piskel over the base hero frame to match world scale and perspective.
+ ![Logo](images/guide.png)
 * **Tshomen / Mermaid (`tshomen_sheet.png`)**: Upper body and color design derived from Gemini references. Fluid 6-frame tail swishing movement was synthesized using SpriteFlow.io, then integrated and cleaned frame-by-frame in Piskel over the 48×48 base.
+![Logo](images/tshomen.png)
 
 ### 2.3 Environmental Assets & Visual Pipeline Fixes
 
