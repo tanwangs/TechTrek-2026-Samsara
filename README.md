@@ -98,11 +98,9 @@ choose which of the three sacred sites to visit first.
 ## Team
 
 | Name | Role |
-
+|---|---|
 | Jigme Tshering| Documentation/Storyline/Website |
-
 | Sangay Tharchen | Documentation/Storyline/Sprites |
-
 | Tandin Wangyel | Documentation/Developer |
 
 ---
