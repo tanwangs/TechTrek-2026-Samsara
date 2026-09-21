@@ -70,19 +70,3 @@ The project followed an **Agile / Iterative Development Model** across four main
 2. **Input Intercept:** Player presses interact (`E` / `Space`). `NPC.interact()` verifies player position and calls `DialogueManager.start(sequence)`.
 3. **Branching Sequence:** `NPC._pick_sequence()` evaluates `GameState.has_seen(lore_key)` to automatically play primary narrative on first visit or repeat dialogue on subsequent visits.
 4. **Quest Resolution:** Completing actions (cleaning waste, placing altar items, listening to all 3 monks) calls `GameState.mark_realm_complete("realm_name")`.
-
-### 4.4 Automated Testing & QA
-The codebase underwent rigorous automated testing using GDScript test runners. All **80 / 80 tests passed** across 11 test suites:
-
-[PASSED] test_dialogue.gd             (8/8)
-[PASSED] test_drakay_pangtsho_quest.gd(9/9)
-[PASSED] test_ending_sequence.gd      (8/8)
-[PASSED] test_game_state.gd           (9/9)
-[PASSED] test_monk.gd                 (7/7)
-[PASSED] test_project_setup.gd        (5/5)
-[PASSED] test_prop_sorting.gd         (1/1)
-[PASSED] test_scene_transitions.gd    (5/5)
-[PASSED] test_shrine.gd               (7/7)
-[PASSED] test_taktsang_quest.gd       (9/9)
-[PASSED] test_village_opening.gd      (8/8)
-TOTAL: 80 / 80 Passed (100% Pass Rate)
