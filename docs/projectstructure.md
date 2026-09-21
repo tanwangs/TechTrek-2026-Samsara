@@ -1,3 +1,4 @@
+```
 your-game-repository/
 ├── src/                  # Your game code (Unity, Godot, etc.)
 ├── README.md             # The quick overview (Points to the docs folder)
@@ -9,3 +10,4 @@ your-game-repository/
     ├── 5-development.md  # Sections 3.9, 3.10, 3.12 (SDLC, Tech Stack, Deployment)
     ├── 6-testing.md      # Section 3.11 (Test cases, UAT, bug tracking)
     └── 7-postmortem.md   # Sections 3.13, 3.14, 3.15, 3.16 (Challenges, AI logs, Refs)
+```
