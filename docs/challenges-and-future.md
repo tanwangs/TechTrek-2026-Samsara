@@ -1,65 +1,31 @@
 # Challenges & Future Enhancements
 
-## Challenges and Solutions
+## Key Challenges & Solutions
 
-### Challenge: character depth-sorting bug from AnimatedSprite2D state overrides
-Characters were rendering incorrectly in front of/behind props due to
-pre-baked `frame_progress` attributes on `AnimatedSprite2D` nodes
-interfering with engine-driven Y-sorting.
+* **Depth-Sorting Sprite Bug:** Pre-baked `frame_progress` attributes on `AnimatedSprite2D` nodes broke engine Y-sorting.
+* **Solution:** Stripped `frame_progress` from scene nodes, restoring pure engine-driven depth sorting (verified by `test_prop_sorting.gd`).
 
-**Solution:** stripped the pre-baked `frame_progress` attributes,
-restoring pure engine-driven Y-sorting across level layers, verified by
-`test_prop_sorting.gd`.
 
-### Challenge: AI-agent-generated decoration initially bypassed the TileMapLayer terrain system
-Early in development, AI-agent-generated decoration (trees, rocks,
-flags) was created as standalone `Sprite2D` nodes rather than as part of
-the `props` TileMapLayer, creating structural inconsistency and
-complicating collision/interaction management.
+* **Standalone AI Decor Sprites:** Early AI-generated props (trees, rocks) were spawned as individual `Sprite2D` nodes instead of `TileMapLayer` cells, complicating collisions.
+* **Solution:** Mapped standalone sprites into `props` TileSet atlas coordinates and updated AI generation prompts to output TileMapLayer cells directly.
 
-**Solution:** converted existing standalone sprites into TileMapLayer
-cells via a mapping between each sprite and its corresponding TileSet
-source/atlas coordinates, and refined future AI-agent prompts to
-explicitly specify TileMapLayer cells rather than standalone sprites.
 
-### Challenge: iterative design revision required propagating changes across already-implemented systems
-As the storyline was revised across development (protagonist
-characterization, per-realm mechanic redesigns, additional side quests),
-each revision required careful sequencing — e.g. map/terrain layout
-changes needed to happen before dialogue/NPC-positioning revisions that
-depended on final NPC placement.
+* **Multi-System Iteration Sequencing:** Storyline and quest redesigns created cross-system bugs when NPC placements or camera handoffs desynced from map revisions.
+* **Solution:** Enforced a strict update order (map layout $\rightarrow$ NPC positions $\rightarrow$ dialogue) combined with explicit integration audits.
 
-**Solution:** adopted a staged, ordered prompting approach with explicit
-integration-audit passes after major changes to catch cross-system
-inconsistencies (camera handoff, orphaned node references, transition
-ordering).
 
-### Challenge: matching AI-agent model capability to task complexity
-Some tasks (e.g. spatial map-layout generation matching real-world
-geography) proved difficult for smaller/faster AI models to execute
-well, while working acceptably for larger reasoning-capable models.
+* **AI Model Capability Tiering:** Smaller AI models struggled with spatial map layouts matching real-world geography.
+* **Solution:** Routed simple, isolated edits to faster models and reserved complex spatial/multi-system tasks for larger reasoning models.
 
-**Solution:** matched task complexity to model tier — smaller, faster
-models for contained, well-defined edits; larger reasoning models for
-multi-system or spatially complex tasks.
+
 
 ---
 
 ## Future Enhancements
 
-- Full documentation and test coverage for systems developed later in
-  the design process: the taxi travel mechanism, and the additional
-  side quests ("The Herder's Path," "Mending What's Shared," "The
-  Pilgrim's Climb")
-- A dedicated sound-effect layer, including mechanically significant
-  audio feedback (e.g. real-time pacing cues at Jomolhari)
-- Localization/translation support, particularly for Dzongkha-language
-  terms and place names, to increase cultural authenticity and
-  accessibility
-- Expanded classroom-integration materials (e.g. discussion guides per
-  subject application)
-- Additional sacred realms/nyes beyond the initial three, following the
-  established design pattern (mechanically distinct main quest + two
-  thematically-contrasting side quests)
-- Accessibility improvements (colorblind-friendly UI, remappable
-  controls, adjustable text speed)
+* **Expanded Test Coverage:** Add dedicated test suites for the taxi travel system and all realm side quests.
+* **Dedicated SFX Layer:** Implement real-time audio feedback for mechanics (e.g., pacing cues at Jomolhari).
+* **Dzongkha Localization:** Add native language/translation support for Bhutanese place names and cultural terms.
+* **Classroom Resources:** Develop dedicated discussion guides and curriculum integration tools.
+* **New Sacred Realms:** Add more *nyes* following the core design formula (1 unique main quest + 2 thematic side quests).
+* **Accessibility Features:** Add remappable controls, text speed adjustments, and colorblind-friendly UI options.
