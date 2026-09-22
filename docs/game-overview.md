@@ -14,7 +14,7 @@ Logline: Step into the boots of Tashi, a young student going on a "Nature Retrea
 
 ---
 
-## 1.2 Educational Purpose & GNH Alignment
+## 1.2 Educational Purpose
 
 ### Purpose
 Cultural Revitalization: Bridge the gap between modern digital-native youth and Bhutan’s traditional heritage, spiritual oral histories, and sacred nature reverence.
@@ -23,7 +23,7 @@ Active Learning: Shift learning from passive textbook reading into an active, ex
 
 Educational Alignment (Gross National Happiness)Cultural Preservation & Promotion: Direct engagement with Bhutanese folklore, Buddhist monastic history, local deities (Tshomen, Aum Jomo), and ancient names of the sacred land (Monyul / Lhomon).  Environmental Conservation: Interacting directly with fragile ecosystems to teach non-interference, high-altitude respect, and lake preservation.
 
-## Subject Integration & Curricular Core
+## Subject Integration
 
 ```
                              +-----------------------------------+
@@ -55,7 +55,7 @@ Art, Architecture, and Visual Humanities: Meticulous pixel art representation of
 
 ---
 
-## 1.3 Target Audience & Classroom Integration
+## 1.3 Target Audience
 
 ### Target Audience & Demographics
 
@@ -76,12 +76,12 @@ Environmental Studies: Studying high-altitude alpine ecology and conservation th
 
 ---
 
-## 1.4 Problem Statement & Value Proposition
+## 1.4 Problem Statement and Solution
 
 ### The Problem
 As globalized lifestyles, technology, and screen time dominate modern youth culture, young generations are becoming increasingly disconnected from Bhutan's sacred oral traditions, spiritual roots, and deep-seated ecological wisdom. Traditional textbook education often feels abstract or disconnected from a student's lived experience, risking the gradual loss of intangible cultural heritage.
 
-### The Solution / Value Proposition
+### The Solution
 The Tapestry of Monyul gamifies cultural preservation. By embedding core educational values into top-down RPG gameplay, narrative choices, and environmental puzzles, the project transforms passive observers into active participants, preserving vital Bhutanese wisdom in a medium that natively resonates with digital natives.
 
 ## 1.5 Sacred Realms (Nyes) Overview
@@ -100,18 +100,18 @@ The Tapestry of Monyul gamifies cultural preservation. By embedding core educati
 
 ## 1.6 Objectives
  
-**General objective:** design and build a GNH-aligned narrative
-exploration game that bridges modern digital-native youth and Bhutan's
+**General objective:** design and build a GNH aligned narrative
+exploration game that bridges modern digital native youth and Bhutan's
 sacred oral traditions, spiritual heritage, and ecological wisdom.
  
 **Specific objectives:**
-- Implement three sacred-realm quests, each tied to a distinct GNH
+- Implement three sacred realm quests, each tied to a distinct GNH
   pillar (cultural values, environmental studies, art/humanities) and a
   mechanically distinct core lesson
 - Model Ley-Ju-Drey (cause and effect) directly through gameplay
   consequences, not only narration
-- Build a functional core systems layer — `GameState`, `DialogueManager`,
-  `Global`, and `ScreenFade` autoloads — supporting consistent quest
+- Build a functional core systems layer `GameState`, `DialogueManager`,
+  `Global`, and `ScreenFade` autoloads, supporting consistent quest
   tracking, dialogue, spawn persistence, and scene transitions across
   all realms
 - Represent Bhutanese architecture and dress authentically in pixel art
@@ -124,7 +124,7 @@ sacred oral traditions, spiritual heritage, and ecological wisdom.
  
 **Features included:**
 - Full playable loop: village → dream sequence → crossroads/lobby hub →
-  three realm quests → return-to-lobby sequence
+  three realm quests → return to lobby sequence
 - A `DialogueManager` autoload supporting branching first-visit vs.
   repeat-visit dialogue, driven by `GameState.has_seen(lore_key)`
 - A `GameState` autoload tracking an `awareness` stat, a `seen_lore`
@@ -138,6 +138,7 @@ sacred oral traditions, spiritual heritage, and ecological wisdom.
 - Custom Bhutanese architectural props (Dzong, Stupa, prayer flags,
   water bowl) packed into a dedicated TileSet
 - An automated GDScript test suite (11 suites, 80 tests)
+
 **Limitations and exclusions (at time of this documentation):**
 - The taxi travel mechanism (calling/entering a taxi to travel between
   the lobby and each realm) and the additional side quests developed
