@@ -4,6 +4,9 @@
 
 > Working title in development docs: *The Forgotten Thread*
 
+[![Tapestry of Monyul](//img.youtube.com/vi/oOnbAjUEKRI/0.jpg)](//www.youtube.com/watch?v=oOnbAjUEKRI "Tapestry of Monyul")
+
+
 ---
 
 ## Project Overview
