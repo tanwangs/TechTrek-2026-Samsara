@@ -170,3 +170,56 @@ Moves players between maps using a shared, data-driven taxi rank (`scenes/taxi_r
 1. **Dialogue Gating:** Proximity triggers the prompt. Pressing **E** checks `GameState` history to branch between main and repeat dialogue.
 2. **Quest Resolution:** Completing realm mechanics (cleaning litter, placing offerings, completing oral retellings) triggers `GameState.mark_realm_complete()`.
 3. **State Persistence:** Persistent trip data and player coordinates are retained across scene changes via `Global` singletons.
+
+## 5. The Addition of Music
+
+**Script:** `res://scripts/music_manager.gd`, registered as the `MusicManager` autoload in `project.godot`. Audio tracks are stored in `res://assets/audio/music/`.
+
+### System
+
+To keep background music persistent across scene changes, the music system is managed by a single global singleton (`MusicManager`). 
+
+- **Crossfading:** When switching scenes or triggering atmosphere changes, `MusicManager` crossfades between two internal `AudioStreamPlayer` nodes using a `Tween` to prevent jarring audio cuts.
+- **State Memory:** `MusicManager` tracks the currently playing track and timestamp, allowing returning areas (e.g., exiting a house back to the overworld) to resume seamlessly without restarting the track from the beginning.
+
+### 5.2 Track Assignments and Triggering
+
+| Region / Event | Track File | Behavior |
+|---|---|---|
+| Main Menu / Title | `main_theme.ogg` | Loops continuously |
+| Overworld / Exploration | `main_theme.ogg` | Continues playing across map transitions |
+| Shrine / Sacred Sites | `shrine_theme.ogg` | Crossfades in upon entering shrine zone area |
+
+---
+
+## 6. The Sound Effects (SFX) System
+
+**Script:** `res://scripts/sfx_manager.gd`, registered as the `SFXManager` autoload in `project.godot`. All UI and gameplay feedback sounds live in `res://assets/audio/sfx/`.
+
+### Fire-and-Forget Architecture
+
+To prevent SFX playback from cluttering world nodes, the `SFXManager` autoload handles positional and UI audio through a dynamic pool of standard `AudioStreamPlayer` nodes:
+
+- **Audio Pooling:** Calling `play_sfx(stream, pitch_randomness = 0.0, volume_db = 0.0)` retrieves an available `AudioStreamPlayer` from an internal pool (or instances a new one if all pooled players are busy).
+- **Pitch Variation:** A subtle pitch shift (`randf_range(1.0 - delta, 1.0 + delta)`) is applied to repetitive actions like footstep cycles, button presses, and UI navigation to reduce auditory fatigue.
+- **Auto-Cleanup:** When a non-looping sound finishes playing (`finished` signal), the stream is cleared, volume/pitch parameters reset to baseline, and the player node is returned to the inactive pool.
+
+### Key SFX Mappings and Trigger Events
+
+| Sound Event | Trigger / Signal Source | Default Pitch Spread |
+|---|---|---|
+| `ui_click` | Dialogue choice focus, travel menu selection | ±0.05 |
+| `text_type` | `DialogueBox` typewriter step (`substr` reveal) | ±0.02 |
+| `page_turn` | Advancing dialogue lines / Journal interaction | 0.0 (Fixed) |
+| `step_footstep` | `Player._physics_process` walking state timer | ±0.08 |
+| `water_cleanse` | `DrakayPangtshoQuest` restoration trigger | 0.0 (Fixed) |
+| `offering_placed` | `JomolhariQuest` altar interaction | 0.0 (Fixed) |
+| `taxi_engine` | `TaxiRank._play_arrival()` & departure sequence | 0.0 (Fixed) |
+
+---
+
+### Cross-cutting patterns worth keeping in the documentation:
+
+* **Autoload Singletons:** Global manager instances (`SFXManager`, `MusicManager`, `GameState`) decoupled from scene hierarchies.
+* **Signal-Driven Events:** UI and world interactions trigger events through signals rather than direct node dependencies.
+* **Object Pooling:** SFX instances are pooled and cleaned up automatically upon completion.
